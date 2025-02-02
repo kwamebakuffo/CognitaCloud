@@ -1,8 +1,4 @@
-provider "aws" {
-  region     = "us-east-1"             # Change this to your preferred region
-  access_key = "AKIA56T4ZPWEL77UUG3N"  # Replace with your Access Key ID
-  secret_key = "he5NIjhmUo+dN2iLuyHa+" # Replace with your Secret Access Key
-}
+# main.tf
 
 # Create a Simple AD Directory for Amazon WorkSpaces
 resource "aws_directory_service_directory" "workspace_directory" {
@@ -11,8 +7,8 @@ resource "aws_directory_service_directory" "workspace_directory" {
   size     = "Small"
 
   vpc_settings {
-    vpc_id     = "vpc-xxxxxxxx"                         # Replace with your VPC ID
-    subnet_ids = ["subnet-xxxxxxxx", "subnet-yyyyyyyy"] # Replace with your private subnet IDs
+    vpc_id     = "vpc-0a1b2c3d4e5f6g7h8"                                  # Replace with your actual VPC ID
+    subnet_ids = ["subnet-0a1b2c3d4e5f6g7h8", "subnet-0a1b2c3d4e5f6g7i9"] # Replace with your actual subnet IDs
   }
 
   tags = {
@@ -24,7 +20,7 @@ resource "aws_directory_service_directory" "workspace_directory" {
 resource "aws_security_group" "workspace_sg" {
   name        = "workspaces-sg"
   description = "Security group for Amazon WorkSpaces"
-  vpc_id      = "vpc-xxxxxxxx" # Replace with your VPC ID
+  vpc_id      = "vpc-0a1b2c3d4e5f6g7h8" # Replace with your actual VPC ID
 
   ingress {
     from_port   = 443
