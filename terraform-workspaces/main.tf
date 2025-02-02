@@ -1,5 +1,3 @@
-# main.tf
-
 # Create a Simple AD Directory for Amazon WorkSpaces
 resource "aws_directory_service_directory" "workspace_directory" {
   name     = "corp.example.com"

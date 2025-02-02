@@ -190,7 +190,7 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
 
 For questions or feedback, feel free to reach out:
 
-- **Email**: your-email@example.com
+- **Email**: kwame@cognitacloud.com
 - **GitHub**: [Your GitHub Profile](https://github.com/your-profile)
 
 ---
